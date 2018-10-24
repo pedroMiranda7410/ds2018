@@ -1,9 +1,9 @@
 # ds2018
 
 Filtros:
---Engenharia de software
-----Linguagens de programação:
---------(x) Python
+- -Engenharia de software
+- Linguagens de programação:
+ - (x) Python
 --------(x) C
 --------(x) C++
 --------(x) C#
