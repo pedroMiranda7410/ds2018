@@ -37,7 +37,7 @@
         <!-- Sidebar Header    -->
         <div class="sidenav-header d-flex align-items-center justify-content-center">
           <!-- User Info-->
-          <div class="sidenav-header-inner text-center"><img src="img/teste_telegram.jpg" alt="person" class="img-fluid rounded-circle">
+          <div class="sidenav-header-inner text-center"><img src="static/img/teste_telegram.jpg" alt="person" class="img-fluid rounded-circle">
             <h2 class="h5">Pedro Henrique Queiroz</h2><span>Programador</span>
           </div>
           <!-- Small Brand information, appears on minimized sidebar-->
@@ -47,17 +47,91 @@
         <div class="main-menu">
           <h5 class="sidenav-heading">Main</h5>
           <ul id="side-main-menu" class="side-menu list-unstyled">
-            <li><a href="index.html"> <i class="icon-home"></i>Engenharia Aeroespacial                             </a></li>
-            <li><a href="forms.html"> <i class="icon-form"></i>Engenharia Automotiva                             </a></li>
-            <li><a href="charts.html"> <i class="fa fa-bar-chart"></i>Engenharia de Energia                             </a></li>
-            <li><a href="tables.html"> <i class="icon-grid"></i>Engenharia Eltrônica                         </a></li>
-            <li><a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-interface-windows"></i>Engenharia de Software </a>
+
+            <li><a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-interface-windows"></i>Engenharia Eletrônica </a>
               <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
-                <li><a href="#">Python</a></li>
-                <li><a href="#">Java</a></li>
-                <li><a href="#">Ruby on rails</a></li>
+
+                <div class="card to-do">
+                  <div class="card-filtros">
+
+                  <ul class="check-lists list-unstyled">
+                    <li class="d-flex align-items-center">
+                      <input type="checkbox" id="list-1" name="list-1" class="form-control-custom">
+                      <label for="list-1"> Circuitos I <br /> </label>
+                    </li>
+                    <li class="d-flex align-items-center">
+                      <input type="checkbox" id="list-2" name="list-2" class="form-control-custom">
+                      <label for="list-2">Eletromag <br /> </label>
+                    </li>
+                    <li class="d-flex align-items-center">
+                      <input type="checkbox" id="list-3" name="list-3" class="form-control-custom">
+                      <label for="list-3">Micro-eletrônica <br /> </label>
+                    </li>
+                    <li class="d-flex align-items-center">
+                      <input type="checkbox" id="list-4" name="list-4" class="form-control-custom">
+                      <label for="list-4"> Embarcados <br /> </label>
+                    </li>
+                    <li class="d-flex align-items-center">
+                      <input type="checkbox" id="list-5" name="list-5" class="form-control-custom">
+                      <label for="list-5"> Arduino <br /> </label>
+                    </li>
+                    <li class="d-flex align-items-center">
+                      <input type="checkbox" id="list-6" name="list-6" class="form-control-custom">
+                      <label for="list-6"> Sistemas Digitais I <br /> </label>
+                    </li>
+
+                  </ul>
+                </div>
+              </div>
               </ul>
             </li>
+
+            <li><a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-interface-windows"></i>Engenharia de Software </a>
+              <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
+
+                <div class="card to-do">
+                  <div class="card-filtros">
+
+                  <ul class="check-lists list-unstyled">
+                    <li class="d-flex align-items-center">
+                      <input type="checkbox" id="list-1" name="list-1" class="form-control-custom">
+                      <label for="list-1">Python <br /> </label>
+                    </li>
+                    <li class="d-flex align-items-center">
+                      <input type="checkbox" id="list-2" name="list-2" class="form-control-custom">
+                      <label for="list-2">Java <br /> </label>
+                    </li>
+                    <li class="d-flex align-items-center">
+                      <input type="checkbox" id="list-3" name="list-3" class="form-control-custom">
+                      <label for="list-3">Javascript <br /> </label>
+                    </li>
+                    <li class="d-flex align-items-center">
+                      <input type="checkbox" id="list-4" name="list-4" class="form-control-custom">
+                      <label for="list-4"> <strong>Linguagem</strong> C<br /> </label>
+                    </li>
+                    <li class="d-flex align-items-center">
+                      <input type="checkbox" id="list-5" name="list-5" class="form-control-custom">
+                      <label for="list-5"><strong>Linguagem</strong> C++ <br /> </label>
+                    </li>
+                    <li class="d-flex align-items-center">
+                      <input type="checkbox" id="list-6" name="list-6" class="form-control-custom">
+                      <label for="list-6"><strong>Linguagem</strong> C# <br /> </label>
+                    </li>
+                    <li class="d-flex align-items-center">
+                      <input type="checkbox" id="list-7" name="list-7" class="form-control-custom">
+                      <label for="list-7"> HTML <br /> </label>
+                    </li>
+                    <li class="d-flex align-items-center">
+                      <input type="checkbox" id="list-8" name="list-8" class="form-control-custom">
+                      <label for="list-8"> PHP <br /> </label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              </ul>
+            </li>
+
+
             <li><a href="login.html"> <i class="icon-interface-windows"></i>Login page                             </a></li>
             <li> <a href="#"> <i class="icon-mail"></i>Demo
                 <div class="badge badge-warning">6 New</div></a></li>
@@ -134,8 +208,8 @@
                 <!-- Languages dropdown    -->
                 <li class="nav-item dropdown"><a id="languages" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link language dropdown-toggle"><img src="img/flags/16/GB.png" alt="English"><span class="d-none d-sm-inline-block">English</span></a>
                   <ul aria-labelledby="languages" class="dropdown-menu">
-                    <li><a rel="nofollow" href="#" class="dropdown-item"> <img src="img/flags/16/DE.png" alt="English" class="mr-2"><span>German</span></a></li>
-                    <li><a rel="nofollow" href="#" class="dropdown-item"> <img src="img/flags/16/FR.png" alt="English" class="mr-2"><span>French                                                         </span></a></li>
+                    <li><a rel="nofollow" href="#" class="dropdown-item"> <img src="static/img/flags/16/DE.png" alt="English" class="mr-2"><span>German</span></a></li>
+                    <li><a rel="nofollow" href="#" class="dropdown-item"> <img src="static/img/flags/16/FR.png" alt="English" class="mr-2"><span>French                                                         </span></a></li>
                   </ul>
                 </li>
                 <!-- Log out-->
@@ -153,13 +227,13 @@
             <div class="col-xl-2 col-md-4 col-6">
               <div class="wrapper count-title d-flex">
                 <div class="icon"><i class="icon-user"></i></div>
-                <div class="name"><strong class="text-uppercase">New Clients</strong><span>Last 7 days</span>
-                  <div class="count-number">25</div>
+                <div class="name"><strong class="text-uppercase">Alunos Cadastrados</strong><span>Últimos 7 dias</span>
+                  <div class="count-number">13</div>
                 </div>
               </div>
             </div>
             <!-- Count item widget-->
-            <div class="col-xl-2 col-md-4 col-6">
+          <!--  <div class="col-xl-2 col-md-4 col-6">
               <div class="wrapper count-title d-flex">
                 <div class="icon"><i class="icon-padnote"></i></div>
                 <div class="name"><strong class="text-uppercase">Work Orders</strong><span>Last 5 days</span>
@@ -167,7 +241,7 @@
                 </div>
               </div>
             </div>
-            <!-- Count item widget-->
+             Count item widget
             <div class="col-xl-2 col-md-4 col-6">
               <div class="wrapper count-title d-flex">
                 <div class="icon"><i class="icon-check"></i></div>
@@ -176,7 +250,7 @@
                 </div>
               </div>
             </div>
-            <!-- Count item widget-->
+             Count item widget-
             <div class="col-xl-2 col-md-4 col-6">
               <div class="wrapper count-title d-flex">
                 <div class="icon"><i class="icon-bill"></i></div>
@@ -185,7 +259,7 @@
                 </div>
               </div>
             </div>
-            <!-- Count item widget-->
+             Count item widget
             <div class="col-xl-2 col-md-4 col-6">
               <div class="wrapper count-title d-flex">
                 <div class="icon"><i class="icon-list"></i></div>
@@ -194,7 +268,7 @@
                 </div>
               </div>
             </div>
-            <!-- Count item widget-->
+             Count item widget-
             <div class="col-xl-2 col-md-4 col-6">
               <div class="wrapper count-title d-flex">
                 <div class="icon"><i class="icon-list-1"></i></div>
@@ -202,7 +276,7 @@
                   <div class="count-number">70</div>
                 </div>
               </div>
-            </div>
+            </div>-->
           </div>
         </div>
       </section>
@@ -211,6 +285,7 @@
         <div class="container-fluid">
           <div class="row d-flex align-items-md-stretch">
             <!-- To Do List-->
+          <!--
             <div class="col-lg-3 col-md-6">
               <div class="card to-do">
                 <h2 class="display h4">To do List</h2>
@@ -251,21 +326,22 @@
                 </ul>
               </div>
             </div>
+          -->
             <!-- Pie Chart-->
-            <div class="col-lg-3 col-md-6">
+            <div class="col-lg-6 col-md-5">
               <div class="card project-progress">
-                <h2 class="display h4">Project Beta progress</h2>
-                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <h2 class="display h4">Gráficos estatísticos</h2>
+                <p> Quantidade de alunos nesses 4 cursos</p>
                 <div class="pie-chart">
                   <canvas id="pieChart" width="300" height="300"> </canvas>
                 </div>
               </div>
             </div>
             <!-- Line Chart -->
-            <div class="col-lg-6 col-md-12 flex-lg-last flex-md-first align-self-baseline">
+            <div class="col-lg-6 col-md-13 flex-lg-last flex-md-first align-self-baseline">
               <div class="card sales-report">
-                <h2 class="display h4">Sales marketing report</h2>
-                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor amet officiis</p>
+                <h2 class="display h4"> <br \> </h2>
+                <p> Quantidade de alunos inscritos nos últimos meses <br /> <br /> <br /></p>
                 <div class="line-chart">
                   <canvas id="lineCahrt"></canvas>
                 </div>
@@ -560,16 +636,16 @@
       </footer>
     </div>
     <!-- JavaScript files-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/popper.js/umd/popper.min.js"> </script>
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-    <script src="js/grasp_mobile_progress_circle-1.0.0.min.js"></script>
-    <script src="vendor/jquery.cookie/jquery.cookie.js"> </script>
-    <script src="vendor/chart.js/Chart.min.js"></script>
-    <script src="vendor/jquery-validation/jquery.validate.min.js"></script>
-    <script src="vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="js/charts-home.js"></script>
+    <script src="static/vendor/jquery/jquery.min.js"></script>
+    <script src="static/vendor/popper.js/umd/popper.min.js"> </script>
+    <script src="static/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="static/js/grasp_mobile_progress_circle-1.0.0.min.js"></script>
+    <script src="static/vendor/jquery.cookie/jquery.cookie.js"> </script>
+    <script src="static/vendor/chart.js/Chart.min.js"></script>
+    <script src="static/vendor/jquery-validation/jquery.validate.min.js"></script>
+    <script src="static/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="static/js/charts-home.js"></script>
     <!-- Main File-->
-    <script src="js/front.js"></script>
+    <script src="static/js/front.js"></script>
   </body>
 </html>

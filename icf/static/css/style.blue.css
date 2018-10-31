@@ -209,8 +209,8 @@ nav.navbar {
 }
 
 nav.navbar .side-navbar-wrapper {
-  width: 100%;
-  height: 100%;
+  width: 200%;
+  height: 200%;
 }
 
 nav.navbar .container-fluid {
@@ -1700,8 +1700,8 @@ STYLE SWITCHER FOR DEMO
   color: #495057;
 }
 
-/* ========================================= 
-   THEMING OF BOOTSTRAP COMPONENTS           
+/* =========================================
+   THEMING OF BOOTSTRAP COMPONENTS
    ========================================= */
 /*
  * 1. NAVBAR
@@ -2386,7 +2386,7 @@ STYLE SWITCHER FOR DEMO
 }
 
 /*
- * 3. TYPE  
+ * 3. TYPE
  */
 body {
   font-family: "Roboto", sans-serif;

@@ -1700,8 +1700,8 @@ STYLE SWITCHER FOR DEMO
   color: #495057;
 }
 
-/* ========================================= 
-   THEMING OF BOOTSTRAP COMPONENTS           
+/* =========================================
+   THEMING OF BOOTSTRAP COMPONENTS
    ========================================= */
 /*
  * 1. NAVBAR
@@ -2386,7 +2386,7 @@ STYLE SWITCHER FOR DEMO
 }
 
 /*
- * 3. TYPE  
+ * 3. TYPE
  */
 body {
   font-family: "Roboto", sans-serif;
@@ -2959,6 +2959,12 @@ a > code {
 */
 .card {
   background-color: #fff;
+  border: 0 solid #eee;
+  border-radius: 0;
+}
+
+.card-filtros{
+  background-color: #393836;
   border: 0 solid #eee;
   border-radius: 0;
 }

@@ -71,14 +71,15 @@ $(document).ready(function () {
         type: 'doughnut',
         data: {
             labels: [
-                "First",
-                "Second",
-                "Third"
+                "Python",
+                "Java",
+                "Html",
+                "Javascript"
             ],
             datasets: [
                 {
-                    data: [300, 50, 100],
-                    borderWidth: [1, 1, 1],
+                    data: [300, 50, 100, 75],
+                    borderWidth: [1, 1, 1, 1],
                     backgroundColor: [
                         brandPrimary,
                         "rgba(75,192,192,1)",
