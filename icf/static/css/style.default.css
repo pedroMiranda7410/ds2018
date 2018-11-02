@@ -99,6 +99,7 @@ table {
   background-color: #F4F7FA;
   min-height: 100vh;
   padding-bottom: 50px;
+  
 }
 
 .page.active {
@@ -1573,14 +1574,14 @@ button {
 
 .login-page .logo span,
 .register-page .logo span {
-  color: #ccc;
+  color: #004080;
 }
 
 .login-page p,
 .register-page p {
   font-size: 0.8em;
   font-weight: 300;
-  color: #aaa;
+  color: #007FFF;
   margin-bottom: 0;
 }
 

@@ -30,10 +30,10 @@ from django.conf.urls import url
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("home/", home, name ="home"),
-    path("forms/", forms, name ="forms"),
+    path("login.html/register.html/", forms, name ="forms"), #esse vai para o forms
     path("charts/", charts, name ="charts"),
-    path("homeProfessor/", homeProfessor, name ="homeProfessor"),
-    path("", login, name ="login"),
-    path("registro/", registro, name = "registro"),
+    path("", homeProfessor, name ="homeProfessor"),
+    path("login.html/", login, name ="login"),
+    path("register/", registro, name = "registro"),
     path("tabelas/", tabelas, name = "tabelas"),
 ]
