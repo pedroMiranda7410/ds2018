@@ -6,6 +6,9 @@ from django.http import HttpResponse
 def home(request):
     return render(request,'index.html')
 
+def homeProfessor(request):
+    return render(request,'homeProfessor.html')
+
 def charts(request):
     return render(request,'charts.html')
 

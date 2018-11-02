@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from core.views import home
+from core.views import homeProfessor
 from core.views import charts
 from core.views import forms
 from core.views import login
@@ -31,7 +32,7 @@ urlpatterns = [
     path("", home, name ="home"),
     path("forms/", forms, name ="forms"),
     path("charts/", charts, name ="charts"),
-
+    path("home/", homeProfessor, name ="homeProfessor"),
     path("login/", login, name ="login"),
     path("registro/", registro, name = "registro"),
     path("tabelas/", tabelas, name = "tabelas"),
