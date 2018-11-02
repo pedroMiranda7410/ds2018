@@ -29,11 +29,11 @@ from django.conf.urls import url
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("", home, name ="home"),
+    path("home/", home, name ="home"),
     path("forms/", forms, name ="forms"),
     path("charts/", charts, name ="charts"),
-    path("home/", homeProfessor, name ="homeProfessor"),
-    path("login/", login, name ="login"),
+    path("homeProfessor/", homeProfessor, name ="homeProfessor"),
+    path("", login, name ="login"),
     path("registro/", registro, name = "registro"),
     path("tabelas/", tabelas, name = "tabelas"),
 ]
