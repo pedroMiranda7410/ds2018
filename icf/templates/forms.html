@@ -168,150 +168,158 @@
           <header>
             <!-- <h1 class="h3 display">Forms            </h1> -->
           </header>
-          <div class="row">
-            <div class="col-lg-6">
-              <div class="card">
-                <div class="card-header d-flex align-items-center">
-                  <h4>Basic Form</h4>
-                </div>
-                <div class="card-body">
-                  <p>Lorem ipsum dolor sit amet consectetur.</p>
-                  <form>
-                    <div class="form-group">
-                      <label>Email</label>
-                      <input type="email" placeholder="Email Address" class="form-control">
-                    </div>
-                    <div class="form-group">
-                      <label>Password</label>
-                      <input type="password" placeholder="Password" class="form-control">
-                    </div>
-                    <div class="form-group">
-                      <input type="submit" value="Signin" class="btn btn-primary">
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="card">
-                <div class="card-header d-flex align-items-center">
-                  <h4>Horizontal Form</h4>
-                </div>
-                <div class="card-body">
-                  <p>Lorem ipsum dolor sit amet consectetur.</p>
-                  <form class="form-horizontal">
-                    <div class="form-group row">
-                      <label class="col-sm-2">Email</label>
-                      <div class="col-sm-10">
-                        <input id="inputHorizontalSuccess" type="email" placeholder="Email Address" class="form-control form-control-success"><small class="form-text">Example help text that remains unchanged.</small>
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label class="col-sm-2">Password</label>
-                      <div class="col-sm-10">
-                        <input id="inputHorizontalWarning" type="password" placeholder="Pasword" class="form-control form-control-warning"><small class="form-text">Example help text that remains unchanged.</small>
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <div class="col-sm-10 offset-sm-2">
-                        <input type="submit" value="Signin" class="btn btn-primary">
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-8">
-              <div class="card">
-                <div class="card-header d-flex align-items-center">
-                  <h4>Inline Form</h4>
-                </div>
-                <div class="card-body">
-                  <form class="form-inline">
-                    <div class="form-group">
-                      <label for="inlineFormInput" class="sr-only">Name</label>
-                      <input id="inlineFormInput" type="text" placeholder="Jane Doe" class="mr-3 form-control">
-                    </div>
-                    <div class="form-group">
-                      <label for="inlineFormInputGroup" class="sr-only">Username</label>
-                      <input id="inlineFormInputGroup" type="text" placeholder="Username" class="mr-3 form-control form-control">
-                    </div>
-                    <div class="form-group">
-                      <input type="submit" value="Submit" class="mr-3 btn btn-primary">
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="card">
-                <div class="card-header d-flex align-items-center">
-                  <h4>Modal Form</h4>
-                </div>
-                <div class="card-body text-center">
-                  <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-primary">Form in simple modal </button>
-                  <!-- Modal-->
-                  <div id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade text-left">
-                    <div role="document" class="modal-dialog">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h5 id="exampleModalLabel" class="modal-title">Signin Modal</h5>
-                          <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
-                        </div>
-                        <div class="modal-body">
-                          <p>Lorem ipsum dolor sit amet consectetur.</p>
-                          <form>
-                            <div class="form-group">
-                              <label>Email</label>
-                              <input type="email" placeholder="Email Address" class="form-control">
-                            </div>
-                            <div class="form-group">
-                              <label>Password</label>
-                              <input type="password" placeholder="Password" class="form-control">
-                            </div>
-                            <div class="form-group">
-                              <input type="submit" value="Signin" class="btn btn-primary">
-                            </div>
-                          </form>
-                        </div>
-                        <div class="modal-footer">
-                          <button type="button" data-dismiss="modal" class="btn btn-secondary">Close</button>
-                          <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+        <!-- pergunta do pibic -->
             <div class="col-lg-12">
               <div class="card">
                 <div class="card-header d-flex align-items-center">
-                  <h4>All form elements</h4>
+                  <h4>Formulario</h4>
                 </div>
+                <div class="line"></div>
+                    <div class="form-group row">
+                      <label class="col-sm-2 form-control-label">  Já participou de algum PIBIC?</label>
+                      <div class="col-sm-10">
+                        <label class="checkbox-inline">
+                          <input id="inlineCheckbox1" type="checkbox" value="option1"> Sim
+                        </label>
+                        <label class="checkbox-inline">
+                          <input id="inlineCheckbox2" type="checkbox" value="option2"> Não
+                        </label>
+                      </div>
+                    <!-- escrever sobre pibic-->
                 <div class="card-body">
                   <form class="form-horizontal">
                     <div class="form-group row">
-                      <label class="col-sm-2 form-control-label">Normal</label>
+                      <label class="col-sm-2 form-control-label">conte-me mais sobre o PIBIC:</label>
                       <div class="col-sm-10">
                         <input type="text" class="form-control">
                       </div>
+
+                        <!-- pergunta sobre o estagio-->
+                <div class="line"></div>
+                    <div class="form-group row">
+
+                      <label class="col-sm-2 form-control-label"> Já estagiou ou está estagiando?</label>
+                      <div class="col-sm-10">
+                        <br /> 
+                        <label class="checkbox-inline">
+                          <input id="inlineCheckbox1" type="checkbox" value="option1"> Sim
+                        </label>
+                        <label class="checkbox-inline">
+                          <input id="inlineCheckbox2" type="checkbox" value="option2"> Não
+                        </label>
+                      </div>
+                        <!-- formulario sobre estagio-->
+                <div class="card-body">
+                  <form class="form-horizontal">
+                    <div class="form-group row">
+                      <label class="col-sm-2 form-control-label">conte-me mais sobre o estagio:</label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control">
+                      </div>
+                      <!-- bloco para informar o lattes-->
                     </div>
                     <div class="line"></div>
                     <div class="form-group row">
-                      <label class="col-sm-2 form-control-label">Help text</label>
+                      <label class="col-sm-2 form-control-label">Informe seu curriculo lattes:</label>
                       <div class="col-sm-10">
-                        <input type="text" class="form-control"><span class="text-small text-gray help-block-none">A block of help text that breaks onto a new line and may extend beyond one line.</span>
+                        <input type="text" class="form-control"><span class="text-small text-gray help-block-none">coloque o link para acesso de seu curriculo lattes, caso tenha um.</span>
+                      </div>
+                      </div>
+
+                    <h5>conhecimentos<h5/> <br />
+                      <!--conhecimentos de software-->
+                    <div class="line"></div>
+                    <div class="form-group row">
+                      <label class="col-sm-2 form-control-label">Software <br><small class="text-primary">areas de conhecimento</small></label>
+                      <div class="col-sm-10">
+                        <div class="i-checks">
+                          <input id="checkboxCustom1" type="checkbox" value="" class="form-control-custom">
+                          <label for="checkboxCustom1">pyhton</label>
+                        </div>
+                        <div class="i-checks">
+                          <input id="checkboxCustom2" type="checkbox" value="" class="form-control-custom">
+                          <label for="checkboxCustom2">C#</label>
+                        </div>
+                        <div class="i-checks">
+                          <input id="checkboxCustom3" type="checkbox" value="" class="form-control-custom">
+                          <label for="checkboxCustom3">Java</label>
+                        </div>
+                        <div class="i-checks">
+                          <input id="checkboxCustom4" type="checkbox" value="" class="form-control-custom">
+                          <label for="checkboxCustom4">PHP</label>
+                        </div>
                       </div>
                     </div>
+                    
+                    <!--conhecimentos de eletronica-->
                     <div class="line"></div>
                     <div class="form-group row">
-                      <label class="col-sm-2 form-control-label">Password</label>
+                      <label class="col-sm-2 form-control-label">Eletrônica <br><small class="text-primary">areas de conhecimento</small></label>
+                      <div class="col-sm-10">
+                        <div class="i-checks">
+                          <input id="checkboxCustom1" type="checkbox" value="" class="form-control-custom">
+                          <label for="checkboxCustom1">Embarcados</label>
+                        </div>
+                        <div class="i-checks">
+                          <input id="checkboxCustom2" type="checkbox" value="" class="form-control-custom">
+                          <label for="checkboxCustom2">Micro</label>
+                        </div>
+                        <div class="i-checks">
+                          <input id="checkboxCustom3" type="checkbox" value="" class="form-control-custom">
+                          <label for="checkboxCustom3">Arduino</label>
+                        </div>
+                      </div>
+                    </div>
+                    <!--conhecimentos de auto-->
+
+                     <div class="line"></div>
+                    <div class="form-group row">
+                      <label class="col-sm-2 form-control-label">Automotiva <br><small class="text-primary">areas de conhecimento</small></label>
+                      <div class="col-sm-10">
+                        <div class="i-checks">
+                          <input id="checkboxCustom1" type="checkbox" value="" class="form-control-custom">
+                          <label for="checkboxCustom1">area1</label>
+                        </div>
+                        <div class="i-checks">
+                          <input id="checkboxCustom2" type="checkbox" value="" class="form-control-custom">
+                          <label for="checkboxCustom2">area2</label>
+                        </div>
+                        <div class="i-checks">
+                          <input id="checkboxCustom3" type="checkbox" value="" class="form-control-custom">
+                          <label for="checkboxCustom3">area3</label>
+                        </div>
+                      </div>
+                    </div>
+                    <!--conhecimentos de aero-->
+                    <div class="line"></div>
+                    <div class="form-group row">
+                      <label class="col-sm-2 form-control-label">Aero <br><small class="text-primary">areas de conhecimento</small></label>
+                      <div class="col-sm-10">
+                        <div class="i-checks">
+                          <input id="checkboxCustom1" type="checkbox" value="" class="form-control-custom">
+                          <label for="checkboxCustom1">area1</label>
+                        </div>
+                        <div class="i-checks">
+                          <input id="checkboxCustom2" type="checkbox" value="" class="form-control-custom">
+                          <label for="checkboxCustom2">area2</label>
+                        </div>
+                        <div class="i-checks">
+                          <input id="checkboxCustom3" type="checkbox" value="" class="form-control-custom">
+                          <label for="checkboxCustom3">area3</label>
+                        </div>
+                      </div>
+                    </div>
+                    <!--area para outros conhecimentos-->
+
+                    <div class="line"></div>
+                    <div class="form-group row">
+                      <label class="col-sm-2 form-control-label">Outros:</label>
                       <div class="col-sm-10">
                         <input type="password" name="password" class="form-control">
                       </div>
                     </div>
-                    <div class="line"></div>
+                    <!--
+                     <div class="line"></div>
                     <div class="form-group row">
                       <label class="col-sm-2 form-control-label">Placeholder</label>
                       <div class="col-sm-10">
@@ -562,12 +570,12 @@
                           <input type="text" class="form-control">
                         </div>
                       </div>
-                    </div>
+                    </div> -->
                     <div class="line"></div>
                     <div class="form-group row">
                       <div class="col-sm-4 offset-sm-2">
-                        <button type="submit" class="btn btn-secondary">Cancel</button>
-                        <button type="submit" class="btn btn-primary">Save changes</button>
+                        <!--<button type="submit" class="btn btn-secondary">Cancel</button> -->
+                        <button type="submit" class="btn btn-primary">Pronto</button>
                       </div>
                     </div>
                   </form>
@@ -613,7 +621,6 @@
     <script src="/static/js/front.js"></script>
 
 {% endblock javascripts %}
-
 
 
   </body>
