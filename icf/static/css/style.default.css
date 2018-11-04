@@ -1814,7 +1814,7 @@ STYLE SWITCHER FOR DEMO
   font-weight: 400;
   border: 1px solid transparent;
   padding: 0.45rem 0.75rem;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   line-height: 1.5;
   border-radius: 0;
   -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
@@ -2392,14 +2392,14 @@ STYLE SWITCHER FOR DEMO
 body {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 100;
   line-height: 1.5;
   color: #212529;
   background-color: #fff;
 }
 
 a {
-  color: #33b35a;
+  color: #66B0FF;
   text-decoration: none;
 }
 
