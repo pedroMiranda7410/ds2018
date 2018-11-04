@@ -23,6 +23,7 @@ from core.views import login
 from core.views import registro
 from core.views import tabelas
 from django.conf.urls import url
+from core.views import esqueceuSenha
 
 
 #urls
@@ -36,4 +37,6 @@ urlpatterns = [
     path("login/", login, name ="login"),
     path("register/", registro, name = "registro"),
     path("tabelas/", tabelas, name = "tabelas"),
+    path("esqueceuSenha/", esqueceuSenha, name = "esqueceuSenha"),
+
 ]
