@@ -6,6 +6,7 @@ from core.views import forms
 from core.views import login
 from core.views import registro
 from core.views import tabelas
+from core.views import update
 from django.conf.urls import url
 
 
@@ -13,4 +14,5 @@ urlpatterns = [
     #url(r'^$', views.index, name ='index'),
     url(r'^$', forms, name="forms"),
     #path("forms/", forms, name = "forms"),
+    url(r'^$', update, name="update"),
 ]

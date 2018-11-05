@@ -22,6 +22,7 @@ from core.views import forms
 from core.views import login
 from core.views import registro
 from core.views import tabelas
+from core.views import update
 from django.conf.urls import url
 from core.views import esqueceuSenha
 
@@ -38,5 +39,6 @@ urlpatterns = [
     path("register/", registro, name = "registro"),
     path("tabelas/", tabelas, name = "tabelas"),
     path("esqueceuSenha/", esqueceuSenha, name = "esqueceuSenha"),
+    path("update/", update, name = "update"),
 
 ]
