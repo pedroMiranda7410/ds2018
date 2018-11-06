@@ -41,7 +41,7 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
     {% endblock stylesheets %}
   </head>
-  
+
   <body>
     <!-- navbar-->
       <header class="header">
@@ -58,10 +58,10 @@
         </nav>
       </header>
     <!-- Pergunta do pibic -->
-      <div class="col-lg-12">
+      <div class="col-lg-18">
         <div class="card">
           <div class="card-header d-flex align-items-center">
-            <h4>Formulario</h4>
+            <h4><Strong>Formulário</Strong></h4>
           </div>
 
           <div class="card-body">
@@ -80,7 +80,7 @@
           <div class="card-body">
             <form class="form-horizontal">
               <div class="form-group row">
-                <label class="col-sm-2 form-control-label">Conte-me mais sobre o PIBIC:</label>
+                <label class="col-sm-2 form-control-label">Conte sobre o(s) PIBIC(s):</label>
                   <div class="col-sm-10"><input type="text" class="form-control"></div>
               </div>
             </form>
@@ -100,7 +100,7 @@
           <div class="card-body">
             <form class="form-horizontal">
               <div class="form-group row">
-                <label class="col-sm-2 form-control-label">Conte-me mais sobre o estagio:</label>
+                <label class="col-sm-2 form-control-label">Conte sobre o(s) estagio(s):</label>
                   <div class="col-sm-10">
                     <input type="text" class="form-control">
                   </div>
@@ -110,13 +110,16 @@
         <!-- bloco para informar o lattes-->
           <div class="line"></div>
             <div class="form-group row">
-              <label class="col-sm-2 form-control-label">Informe seu curriculo lattes:</label>
+              <label class="col-sm-2 form-control-label">Informe seu currículo lattes:</label>
                 <div class="col-sm-10">
                   <input type="text" class="form-control"><span class="text-small text-gray help-block-none">Coloque o link para acesso de seu curriculo lattes, caso tenha um.</span>
                 </div>
             </div>
 
-        <h5>Conhecimentos<h5/> <br/>
+            <div class="card-header d-flex align-items-center">
+        <h4>Conhecimentos<h4/> <br/>
+        </div>
+
         <!--conhecimentos de software-->
           <div class="line"></div>
             <div class="form-group row">
@@ -205,11 +208,16 @@
                   <input type="text" name="text" class="form-control">
                 </div>
               </div>
-          
+
           <div class="line"></div>
             <div class="form-group row">
               <div class="col-sm-4 offset-sm-2">
-                <button type="submit" class="btn btn-primary">Pronto</button>
+
+                <button onclick="location.href = '../sucesso/';" type="submit"  class="btn btn-primary">Pronto</button>
+
+
+                </div>
+
               </div>
             </div>
           </div>

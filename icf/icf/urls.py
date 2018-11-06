@@ -22,6 +22,8 @@ from core.views import forms
 from core.views import login
 from core.views import registro
 from core.views import tabelas
+from core.views import cadastroSucesso
+from core.views import esqueceuSenha
 from core.views import update
 from django.conf.urls import url
 from core.views import esqueceuSenha
@@ -34,11 +36,13 @@ urlpatterns = [
     path("home/", home, name ="home"),
     path("forms/", forms, name ="forms"), #esse vai para o forms
     path("charts/", charts, name ="charts"),
+    path("sucesso/", cadastroSucesso, name ="sucesso"),
     path("", homeProfessor, name ="homeProfessor"),
     path("login/", login, name ="login"),
     path("register/", registro, name = "registro"),
     path("tabelas/", tabelas, name = "tabelas"),
     path("esqueceuSenha/", esqueceuSenha, name = "esqueceuSenha"),
     path("update/", update, name = "update"),
+
 
 ]

@@ -24,6 +24,9 @@ def registro(request):
 def tabelas(request):
     return render(request,'tables.html')
 
+def cadastroSucesso(request):
+    return render(request,'cadastroSucesso.html')
+
 def esqueceuSenha(request):
     return render(request,'esqueceuSenha.html')
 
