@@ -8,6 +8,7 @@ from core.views import registro
 from core.views import tabelas
 from core.views import update
 from django.conf.urls import url
+from core.views import alterarSenha
 
 
 urlpatterns = [
