@@ -35,3 +35,6 @@ def update(request):
 
 def alterarSenha(request):
     return render(request,'alterarSenha.html')
+
+def senhaAlterada(request):
+    return render(request,'senhaAlterada.html')
