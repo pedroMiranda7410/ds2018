@@ -18,9 +18,6 @@
     <!-- Fontastic Custom icon font-->
     <link rel="stylesheet" href="/static/css/fontastic.css">
 
-    <!-- Google fonts - Roboto {% static 'css/style.css' %}-->
-    <!-- Google fonts - Roboto -->
-
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
     <!-- jQuery Circle-->
     <link rel="stylesheet" href="/static/css/grasp_mobile_progress_circle-1.0.0.min.css">
@@ -34,11 +31,8 @@
 
     <link rel="shortcut icon" href="/static/img/-favicon.ico">
 
-    <link rel="shortcut icon" href="/static/img/favicon.ico">
+    <link rel="shortcut icon" href="/static/img/logo.ico">
 
-    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
     {% endblock stylesheets %}
   </head>
 
@@ -49,7 +43,9 @@
           <div class="container-fluid">
             <div class="navbar-holder d-flex align-items-center justify-content-between">
               <div class="navbar-header"> <a href="index.html" class="navbar-brand">
-                  <div class="brand-text d-none d-md-inline-block"><span></span><strong class="text-primary">ICF</strong></div></a></div>
+          		<div class="sidenav-header-inner text-center"><img height="55" width="55" src="/static/img/logo.png" alt="person" class="img-fluid rounded-circle">
+          		</div>
+                </div>
               <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
                 <li class="nav-item"><a href="ajuda.html" class="nav-link logout"> <span class="d-none d-sm-inline-block">Dúvidas</span></a></li>
               </ul>
@@ -57,46 +53,42 @@
           </div>
         </nav>
       </header>
-    <!-- Pergunta do pibic -->
-      <div class="col-lg-18">
-        <div class="card">
-          <div class="card-header d-flex align-items-center">
-            <h4><Strong>Formulário</Strong></h4>
-          </div>
 
-          <div class="card-body">
-          <div class="line"></div>
-            <div class="form-group row">
-              <label class="col-sm-2 form-control-label"> Já participou de algum PIBIC?</label>
-                <div class="col-sm-10">
-                  <label class="checkbox-inline">
-                    <input id="inlineCheckbox1" type="checkbox" value="option1"> Sim
-                  </label>
-                  <label class="checkbox-inline">
-                    <input id="inlineCheckbox2" type="checkbox" value="option2"> Não
-                  </label>
-                </div>
+    <div class="card-header">
+    <div class="card-header"></div>
+      <div class="card-header d-flex align-items-center">
+        <h4><Strong>Formulário</Strong></h4>
+      </div>
+
+      <!-- Pergunta do pibic -->
+      <div class="card-header">
+        <div class="form-group row">
+          <label class="col-sm-2 form-control-label"> Já participou de algum PIBIC?</label>
+            <div class="col-sm-10">
+              <input id="page_forms_op1" type="checkbox" value="" class="form-control-custom">
+                <label for="page_forms_op1">Sim</label>
+              <input id="page_forms_op2" type="checkbox" value="" class="form-control-custom">
+                <label for="page_forms_op2">Não</label>
+            </div>
+        </div>
         <!-- escrever sobre pibic-->
-          <div class="card-body">
-            <form class="form-horizontal">
-              <div class="form-group row">
-                <label class="col-sm-2 form-control-label">Conte sobre o(s) PIBIC(s):</label>
-                  <div class="col-sm-10"><input type="text" class="form-control"></div>
-              </div>
-            </form>
+        <form class="form-horizontal">
+          <div class="form-group row">
+            <label class="col-sm-2 form-control-label">Conte sobre o(s) PIBIC(s):</label>
+             <div class="col-sm-10"><input type="text" class="form-control"></div>
+          </div>
+        </form>
         <!-- pergunta sobre o estagio-->
-          <div class="line"></div>
-            <div class="form-group row">
-              <label class="col-sm-2 form-control-label">Já estagiou ou está estagiando?</label>
-                <div class="col-sm-10">
-                  <label class="checkbox-inline">
-                    <input id="inlineCheckbox1" type="checkbox" value="option1"> Sim
-                  </label>
-                  <label class="checkbox-inline">
-                    <input id="inlineCheckbox2" type="checkbox" value="option2"> Não
-                  </label>
-                </div>
+        <div class="form-group row">
+           <label class="col-sm-2 form-control-label">Já estagiou ou está estagiando?</label>
+              <div class="col-sm-10">
+                <input id="page_forms_op3" type="checkbox" value="" class="form-control-custom">
+                <label for="page_forms_op3">Sim</label>
+                <input id="page_forms_op4" type="checkbox" value="" class="form-control-custom"><label for="page_forms_op4">Não</label>
+              </div>
+        </div>
         <!-- formulario sobre estagio-->
+<<<<<<< HEAD
           <div class="card-body">
             <form class="form-horizontal">
               <div class="form-group row">
@@ -104,125 +96,124 @@
                   <div class="col-sm-10">
                     <input type="text" class="form-control">
                   </div>
-              </div>
-            </form>
-
-        <!-- bloco para informar o lattes-->
-          <div class="line"></div>
-            <div class="form-group row">
-              <label class="col-sm-2 form-control-label">Informe seu currículo lattes:</label>
-                <div class="col-sm-10">
-                  <input type="text" class="form-control"><span class="text-small text-gray help-block-none">Coloque o link para acesso de seu curriculo lattes, caso tenha um.</span>
-                </div>
-            </div>
-
-            <div class="card-header d-flex align-items-center">
-        <h4>Conhecimentos<h4/> <br/>
-        </div>
-
-        <!--conhecimentos de software-->
-          <div class="line"></div>
-            <div class="form-group row">
-              <label class="col-sm-2 form-control-label">Software <br><small class="text-primary">Áreas de conhecimento</small></label>
+=======
+        <form class="form-horizontal">
+          <div class="form-group row">
+            <label class="col-sm-2 form-control-label">Conte sobre o(s) estagio(s):</label>
               <div class="col-sm-10">
-                <div class="i-checks">
-                  <input id="checkboxCustom1" type="checkbox" value="" class="form-control-custom">
-                  <label for="checkboxCustom1">Pyhton</label>
-                </div>
-                <div class="i-checks">
-                  <input id="checkboxCustom2" type="checkbox" value="" class="form-control-custom">
-                  <label for="checkboxCustom2">C#</label>
-                </div>
-                <div class="i-checks">
-                  <input id="checkboxCustom3" type="checkbox" value="" class="form-control-custom">
-                  <label for="checkboxCustom3">Java</label>
-                </div>
-                <div class="i-checks">
-                  <input id="checkboxCustom4" type="checkbox" value="" class="form-control-custom">
-                  <label for="checkboxCustom4">PHP</label>
-                </div>
+                <input type="text" class="form-control">
+>>>>>>> 8717a329d525b98525d0e38fde5e0b8c2ec6e68e
               </div>
+          </div>
+        </form>
+        <!-- bloco para informar o lattes-->
+        <div class="line"></div>
+          <div class="form-group row">
+            <label class="col-sm-2 form-control-label">Informe seu currículo lattes:</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control"><span class="text-small text-gray help-block-none">Coloque o link para acesso de seu curriculo lattes, caso tenha um.</span>
             </div>
-        <!--conhecimentos de eletronica-->
-          <div class="line"></div>
-            <div class="form-group row">
-              <label class="col-sm-2 form-control-label">Eletrônica <br><small class="text-primary">Áreas de conhecimento</small></label>
-                <div class="col-sm-10">
-                  <div class="i-checks">
-                    <input id="checkboxCustom1" type="checkbox" value="" class="form-control-custom">
-                    <label for="checkboxCustom1">Embarcados</label>
-                  </div>
-                  <div class="i-checks">
-                    <input id="checkboxCustom2" type="checkbox" value="" class="form-control-custom">
-                    <label for="checkboxCustom2">Microcontroladores</label>
-                  </div>
-                  <div class="i-checks">
-                    <input id="checkboxCustom3" type="checkbox" value="" class="form-control-custom">
-                    <label for="checkboxCustom3">Arduino</label>
-                  </div>
-                </div>
+          </div>
+      </div>
+      
+      <div class="card-header d-flex align-items-center">
+        <h4>Conhecimentos<h4/> <br/>
+      </div>
+      <div class="card-header">
+        <!--conhecimentos de software-->
+        <div class="form-group row">
+          <label class="col-sm-2 form-control-label">Software <br><small class="text-primary">Áreas de conhecimento</small></label>
+            <div class="col-sm-10">
+              <div class="i-checks">
+                <input id="page_forms_sftw1" type="checkbox" value="" class="form-control-custom">
+                <label for="page_forms_sftw1">Pyhton</label>
               </div>
-        <!--conhecimentos de auto-->
-          <div class="line"></div>
-            <div class="form-group row">
-              <label class="col-sm-2 form-control-label">Automotiva <br><small class="text-primary">Áreas de conhecimento</small></label>
-                <div class="col-sm-10">
-                  <div class="i-checks">
-                    <input id="checkboxCustom1" type="checkbox" value="" class="form-control-custom">
-                    <label for="checkboxCustom1">Área1</label>
-                  </div>
-                  <div class="i-checks">
-                    <input id="checkboxCustom2" type="checkbox" value="" class="form-control-custom">
-                    <label for="checkboxCustom2">Área2</label>
-                  </div>
-                  <div class="i-checks">
-                    <input id="checkboxCustom3" type="checkbox" value="" class="form-control-custom">
-                    <label for="checkboxCustom3">Área3</label>
-                  </div>
-                </div>
-            </div>
-        <!--conhecimentos de aero-->
-          <div class="line"></div>
-            <div class="form-group row">
-              <label class="col-sm-2 form-control-label">Aeroespacial<br><small class="text-primary">Áreas de conhecimento</small></label>
-                <div class="col-sm-10">
-                  <div class="i-checks">
-                    <input id="checkboxCustom1" type="checkbox" value="" class="form-control-custom">
-                    <label for="checkboxCustom1">Área1</label>
-                  </div>
-                  <div class="i-checks">
-                    <input id="checkboxCustom2" type="checkbox" value="" class="form-control-custom">
-                    <label for="checkboxCustom2">Área2</label>
-                  </div>
-                  <div class="i-checks">
-                    <input id="checkboxCustom3" type="checkbox" value="" class="form-control-custom">
-                    <label for="checkboxCustom3">Área3</label>
-                  </div>
-                </div>
-            </div>
-        <!--Área para outros conhecimentos-->
-          <div class="line"></div>
-              <div class="form-group row">
-                <label class="col-sm-2 form-control-label">Outros:</label>
-                <div class="col-sm-10">
-                  <input type="text" name="text" class="form-control">
-                </div>
+              <div class="i-checks">
+                <input id="page_forms_sftw2" type="checkbox" value="" class="form-control-custom">
+                <label for="page_forms_sftw2">C#</label>
               </div>
-
-          <div class="line"></div>
-            <div class="form-group row">
-              <div class="col-sm-4 offset-sm-2">
-
-                <button onclick="location.href = '../sucesso/';" type="submit"  class="btn btn-primary">Pronto</button>
-
-
-                </div>
-
+              <div class="i-checks">
+                <input id="page_forms_sftw3" type="checkbox" value="" class="form-control-custom">
+                <label for="page_forms_sftw3">Java</label>
+              </div>
+              <div class="i-checks">
+                <input id="page_forms_sftw4" type="checkbox" value="" class="form-control-custom">
+                 <label for="page_forms_sftw4">PHP</label>
               </div>
             </div>
           </div>
-        </div>
-      </footer>
+        <!--conhecimentos de eletronica-->
+        <div class="line"></div>
+          <div class="form-group row">
+          <label class="col-sm-2 form-control-label">Eletrônica <br><small class="text-primary">Áreas de conhecimento</small></label>
+            <div class="col-sm-10">
+              <div class="i-checks">
+                <input id="page_forms_eletric1" type="checkbox" value="" class="form-control-custom">
+                <label for="page_forms_eletric1">Embarcados</label>
+              </div>
+              <div class="i-checks">
+                <input id="page_forms_eletric2" type="checkbox" value="" class="form-control-custom">
+                <label for="page_forms_eletric2">Microcontroladores</label>
+              </div>
+              <div class="i-checks">
+                <input id="page_forms_eletric3" type="checkbox" value="" class="form-control-custom">
+                <label for="page_forms_eletric3">Arduino</label>
+              </div>
+            </div>
+          </div>
+        <!--conhecimentos de auto-->
+        <div class="line"></div>
+          <div class="form-group row">
+            <label class="col-sm-2 form-control-label">Automotiva <br><small class="text-primary">Áreas de conhecimento</small></label>
+              <div class="col-sm-10">
+                <div class="i-checks">
+                  <input id="page_forms_auto1" type="checkbox" value="" class="form-control-custom">
+                  <label for="page_forms_auto1">Área1</label>
+                </div>
+                <div class="i-checks">
+                  <input id="page_forms_auto2" type="checkbox" value="" class="form-control-custom">
+                  <label for="page_forms_auto2">Área2</label>
+                </div>
+                <div class="i-checks">
+                  <input id="page_forms_auto3" type="checkbox" value="" class="form-control-custom">
+                  <label for="page_forms_auto3">Área3</label>
+                </div>
+              </div>
+          </div>
+        <!--conhecimentos de aero-->
+        <div class="line"></div>
+          <div class="form-group row">
+            <label class="col-sm-2 form-control-label">Aeroespacial<br><small class="text-primary">Áreas de conhecimento</small></label>
+              <div class="col-sm-10">
+                <div class="i-checks">
+                  <input id="page_forms_aero1" type="checkbox" value="" class="form-control-custom">
+                  <label for="page_forms_aero1">Área1</label>
+                </div>
+                <div class="i-checks">
+                  <input id="page_forms_aero2" type="checkbox" value="" class="form-control-custom">
+                  <label for="page_forms_aero2">Área2</label>
+                </div>
+                <div class="i-checks">
+                  <input id="page_forms_aero3" type="checkbox" value="" class="form-control-custom">
+                  <label for="page_forms_aero3">Área3</label>
+                </div>
+              </div>
+          </div>
+        <!--Área para outros conhecimentos-->
+        <div class="line"></div>
+          <div class="form-group row">
+            <label class="col-sm-2 form-control-label">Outros:</label>
+            <div class="col-sm-10">
+              <input type="text" name="text" class="form-control">
+            </div>
+          </div>
+        <div class="line"></div>
+          <div class="form-group row">
+            <div class="col-sm-4 offset-sm-2">
+              <button onclick="location.href = '../sucesso/';" type="submit"  class="btn btn-primary">Pronto</button>
+            </div>
+          </div>
+      </div>
     </div>
     <!-- JavaScript files-->
     {% block javascripts %}

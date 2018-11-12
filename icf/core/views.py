@@ -32,3 +32,9 @@ def esqueceuSenha(request):
 
 def update(request):
     return render(request,'update.html')
+
+def alterarSenha(request):
+    return render(request,'alterarSenha.html')
+
+def senhaAlterada(request):
+    return render(request,'senhaAlterada.html')

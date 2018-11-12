@@ -27,7 +27,8 @@ from core.views import esqueceuSenha
 from core.views import update
 from django.conf.urls import url
 from core.views import esqueceuSenha
-
+from core.views import alterarSenha
+from core.views import senhaAlterada
 
 #urls
 
@@ -43,6 +44,7 @@ urlpatterns = [
     path("tabelas/", tabelas, name = "tabelas"),
     path("esqueceuSenha/", esqueceuSenha, name = "esqueceuSenha"),
     path("update/", update, name = "update"),
-
+    path("alterarSenha/", alterarSenha, name = "alterarSenha"),
+    path("senhaAlterada/", senhaAlterada, name = "senhaAlterada")
 
 ]
