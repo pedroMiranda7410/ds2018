@@ -41,7 +41,7 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
     {% endblock stylesheets %}
   </head>
-  
+
   <body>
     <!-- navbar-->
       <header class="header">
@@ -58,10 +58,10 @@
         </nav>
       </header>
     <!-- Pergunta do pibic -->
-      <div class="col-lg-12">
+      <div class="col-lg-16">
         <div class="card">
           <div class="card-header d-flex align-items-center">
-            <h4>Atualização de Cadastro</h4>
+            <h4><Strong>Atualização Cadastro</Strong></h4>
           </div>
 
         <!-- escrever sobre pibic-->
@@ -72,40 +72,33 @@
                   <div class="col-sm-10">
                     <input type="text" class="form-control">
                   </div>
+                  <label class="col-sm-2 form-control-label">Nome do Curso:</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control">
+                    </div>
+                    <label class="col-sm-2 form-control-label">Informe seu curriculo lattes:</label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control"><span class="text-small text-gray help-block-none">Coloque o link para acesso de seu curriculo lattes, caso tenha um.</span>
+                      </div>
+                      <label class="col-sm-2 form-control-label">e-mail:</label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control">
+                        </div>
+
+                        <div class="card-header d-flex align-items-center">
+                          <h4><Strong>Conhecimentos</Strong></h4>
+                        </div>
               </div>
             </form>
-        
-        <div class="card-body">
-            <form class="form-horizontal">
-              <div class="form-group row">
-                <label class="col-sm-2 form-control-label">Nome do Curso:</label>
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control">
-                  </div>
-              </div>
-            </form>
-       
+
+
+
         <!-- formulario sobre estagio-->
-          <div class="card-body">
-            <form class="form-horizontal">
-              <div class="form-group row">
-                <label class="col-sm-2 form-control-label">e-mail:</label>
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control">
-                  </div>
-              </div>
-            </form>
 
         <!-- bloco para informar o lattes-->
-          <div class="line"></div>
-            <div class="form-group row">
-              <label class="col-sm-2 form-control-label">Informe seu curriculo lattes:</label>
-                <div class="col-sm-10">
-                  <input type="text" class="form-control"><span class="text-small text-gray help-block-none">Coloque o link para acesso de seu curriculo lattes, caso tenha um.</span>
-                </div>
-            </div>
 
-        <h5>Conhecimentos<h5/> <br/>
+
+
         <!--conhecimentos de software-->
           <div class="line"></div>
             <div class="form-group row">
@@ -194,11 +187,11 @@
                   <input type="text" name="text" class="form-control">
                 </div>
               </div>
-          
+
           <div class="line"></div>
             <div class="form-group row">
               <div class="col-sm-4 offset-sm-2">
-                <button type="submit" class="btn btn-primary">Pronto</button>
+                <button type="submit" class="btn btn-primary">Atualizar</button>
               </div>
             </div>
           </div>
