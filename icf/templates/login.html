@@ -29,28 +29,45 @@
     <!-- Tweaks for older IEs--><!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+
+
+
   </head>
   <body>
     <div class="page login-page">
-      <div class="container">
+      <div class="jumbotron">
         <div class="form-outer text-center d-flex align-items-center">
           <div class="form-inner">
           	<div class="sidenav-header-inner text-center"><img height="115" width="115" src="/static/img/logo.png" alt="person" class="img-fluid rounded-circle">
           </div>
             <div class="logo text-uppercase"><span>ICF</span><strong class="text-primary">Universidade de Brasilia</strong></div>
 
+
+            <form method="post" action="{% url 'core:user_login' %}">
+          {% csrf_token %}
+          {# A more "HTML" way of creating the login form#}
+
+        <!--  <input type="text" name="username" placeholder="Username">
+
+
+          <input type="password" name="password" placeholder="Password">
+-->
+
             <form method="get" class="text-left form-validate">
               <div class="form-group-material">
-                <input id="login-username" type="text" name="loginUsername" required data-msg="Please enter your username" class="input-material">
+                <input type="text" name="username"  required data-msg="Please enter your username" class="input-material">
                 <label for="login-username" class="label-material">Usuário</label>
               </div>
               <div class="form-group-material">
-                <input id="login-password" type="password" name="loginPassword" required data-msg="Please enter your password" class="input-material">
+                <input type="password" name="password" required data-msg="Please enter your password" class="input-material">
                 <label for="login-password" class="label-material">Senha</label>
               </div>
-              <div class="form-group text-center"><a id="login" href="../home/" class="btn btn-primary">Entrar</a>
+
+              <input type="submit" name="" value="Login">
+              <!--<div class="form-group text-center"><a id="login" href="../home/" class="btn btn-primary">Entrar</a> -->
                 <!-- This should be submit button but I replaced it with <a> for demo purposes-->
               </div>
+            </form>
               <div class="form-group text-center"><a id="login" href="../esqueceuSenha/" class="btn">Esqueceu a senha?</a>
 
             </form><a href="#" class="forgot-pass"></a><small>Não tem conta? </small><a href="../register/" class="signup">Registre-se</a>
