@@ -34,6 +34,218 @@
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
    {% endblock stylesheets %}
+
+<script type="text/javascript" src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+
+window.onload = function () {
+	var chart = new CanvasJS.Chart("chartContainer", {
+    animationEnabled: true,
+		title: {
+			text: ""
+		},
+		data: [
+		{
+			type: "pie",
+			dataPoints: [
+				{ y: 0 }
+			]
+		}
+		]
+	});
+	chart.render();
+
+	$("#addDataPoint").click(function () {
+    var checkedValue = "Variavel teste";
+    //var checkedTest = document.getElementsById("software_list-1").value();
+    /*
+    var inputElements = document.getElementsById("foo").value();
+    for(var i=0; inputElements[i]; ++i){
+          if(inputElements[i].checked){
+               checkedValue = inputElements[i].value;
+               break;
+          }
+    } */
+
+    var pacote = document.getElementsByName('Filtro');
+    for (var i = 0; i < pacote.length; i++){
+        if ( pacote[i].checked ) {
+            if(pacote[i].value == "software_python"){
+                var Pacote_i = "Selecionou python";
+                alert(Pacote_i);
+            }else if (pacote[i].value == "software_java") {
+                var Pacote_ii = "Selecionou Java";
+                alert(Pacote_ii);
+            }else if (pacote[i].value == "aerospacial_aeromodelismo") {
+                var Pacote_iii = "Selecionou aeromodelismo";
+                alert(Pacote_iii);
+            }else if (pacote[i].value == "energia_fenomenos") {
+                var Pacote_iii = "Selecionou Fenômenos de Transporte";
+                alert(Pacote_iii);
+            }
+        }
+    }
+	var length = chart.options.data[0].dataPoints.length;
+  for (var i = 0; i < pacote.length; i++){
+      if ( pacote[i].checked ) {
+          if(pacote[i].value == "software_python"){
+            chart.options.title.text = "";
+          	chart.options.data[0].dataPoints.push({ y:8,label: "python"});
+          	chart.render();
+
+          }else if (pacote[i].value == "software_java") {
+            chart.options.title.text = "";
+          	chart.options.data[0].dataPoints.push({ y:3,label: "Java"});
+          	chart.render();
+          }else if (pacote[i].value == "aerospacial_aeromodelismo") {
+            chart.options.title.text = "";
+          	chart.options.data[0].dataPoints.push({ y:2,label: "aeromodelismo"});
+          	chart.render();
+          }else if (pacote[i].value == "energia_fenomenos") {
+            chart.options.title.text = "";
+          	chart.options.data[0].dataPoints.push({ y:15,label: "Fenômenos de Transporte"});
+          	chart.render();
+          }
+      }
+      else if (pacote[i].unchecked){
+        if(pacote[i].value == "software_python"){
+          chart.options.title.text = "";
+          chart.options.data[1] = { y:0};
+          chart.render();
+
+        }else if (pacote[i].value == "software_java") {
+          chart.options.title.text = "";
+          chart.options.data[2].dataPoints.push({ y:0});
+          chart.render();
+        }else if (pacote[i].value == "aerospacial_aeromodelismo") {
+          chart.options.title.text = "";
+          chart.options.data[3].dataPoints.push({ y:0});
+          chart.render();
+        }else if (pacote[i].value == "energia_fenomenos") {
+          chart.options.title.text = "";
+          chart.options.data[4].dataPoints.push({ y:0});
+          chart.render();
+        }
+
+
+      }
+  }
+
+
+	});
+
+	$("#updateDataPoint").click(function () {
+    var checkedTest = "teste";
+	var length = chart.options.data[0].dataPoints.length;
+	chart.options.title.text = checkedTest;
+	chart.options.data[0].dataPoints[length-1].y = 15 - Math.random() * 10;
+	chart.render();
+
+	});
+
+}
+
+function soma(){
+
+  var pacote = document.getElementsByName('Pacote');
+    for (var i = 0; i < pacote.length; i++){
+        if ( pacote[i].checked ) {
+            if(pacote[i].value == "software_python"){
+                var Pacote_i = "Selecionou python";
+                alert(Pacote_i);
+            }else if (pacote[i].value == "software_java") {
+                var Pacote_ii = "Selecionou Java";
+                alert(Pacote_ii);
+            }else if (pacote[i].value == "aerospacial_aeromodelismo") {
+                var Pacote_iii = "Selecionou aeromodelismo";
+                alert(Pacote_iii);
+            }else if (pacote[i].value == "energia_fenomenos") {
+                var Pacote_iii = "Selecionou Fenômenos de Transporte";
+                alert(Pacote_iii);
+            }
+        }
+    }
+
+}
+
+
+});
+
+</script>
+
+<script>
+/*
+window.onload = function () {
+  var PIETESTE = $('#pieChartTeste');
+	var chart = new CanvasJS.Chart(PIETEST, {
+      type: 'doughnut',
+      data: {
+          labels: [
+              "Python",
+              "Java",
+              "Html",
+              "Javascript"
+          ],
+          datasets: [
+              {
+                  data: [55, 50, 100,75],
+                  borderWidth: [1, 1, 1, 1],
+                  backgroundColor: [
+                      brandPrimary,
+                      "rgba(75,192,192,1)",
+                      "#FFCE56"
+                  ],
+                  hoverBackgroundColor: [
+                      brandPrimary,
+                      "rgba(75,192,192,1)",
+                      "#FFCE56"
+                  ]
+              }]
+      }
+	});
+	chart.render();
+
+	$("#addDataPoint").click(function () {
+
+	var length = chart.options.datasets[0].data.length;
+	chart.options.title.text = "New DataPoint Added at the end";
+	chart.options.datasets[0].data.push({ y: 25 - Math.random() * 10});
+	chart.render();
+
+	});
+
+	$("#updateDataPoint").click(function (chart) {
+      chart.options.title.text = 'new title';
+      chart.update();
+    });
+
+  $("#updateDataPointTest").click(  function(chart) {
+      chart.options = {
+          responsive: true,
+          title:{
+              display:true,
+              text: 'Chart.js'
+          },
+          scales: {
+              xAxes: [{
+                  display: true
+              }],
+              yAxes: [{
+                  display: true
+              }]
+          }
+      }
+      chart.update();
+    });
+
+	});
+}
+*/
+</script>
+
+
   </head>
   <body>
     <!-- Side Navbar -->
@@ -64,10 +276,12 @@
                   <div class="card-filtros">
 
                   <ul class="check-lists list-unstyled">
+                    <!--
                     <li class="d-flex align-items-center">
                       <input type="checkbox" id="eletronica_list-1" name="eletronica_list-1" class="form-control-custom">
                       <label class="checkbox"> Circuitos I <br /> </label>
                     </li>
+
                     <li class="d-flex align-items-center">
                       <input type="checkbox" id="eletronica_list-2" name="eletronica_list-2" class="form-control-custom">
                       <label for="eletronica_list-2">Eletromag {{ choice.tag }} {{ choice.choice_label }}<br /> </label>
@@ -88,7 +302,7 @@
                       <input type="checkbox" id="eletronica_list-6" name="eletronica_list-6" class="form-control-custom">
                       <label for="eletronica_list-6"> Sistemas Digitais I {{ choice.tag }} {{ choice.choice_label }} <br /> </label>
                     </li>
-
+                  -->
                   </ul>
                 </div>
               </div>
@@ -103,13 +317,14 @@
 
                   <ul class="check-lists list-unstyled2">
                     <li class="d-flex align-items-center">
-                      <input type="checkbox" id="software_list-1" name="software_list-1" class="form-control-custom">
+                      <input type="checkbox" id="software_list-1" name="Filtro" value="software_python" onClick="soma()" class="form-control-custom">
                       <label for="software_list-1">Python <br /> </label>
                     </li>
                     <li class="d-flex align-items-center">
-                      <input type="checkbox" id="software_list-2" name="software_list-2" class="form-control-custom">
+                      <input type="checkbox" id="software_list-2" name="Filtro" value="software_java" onClick="soma()" class="form-control-custom">
                       <label for="software_list-2">Java <br /> </label>
                     </li>
+                    <!--
                     <li class="d-flex align-items-center">
                       <input type="checkbox" id="software_list-3" name="software_list-3" class="form-control-custom">
                       <label for="software_list-3">Javascript <br /> </label>
@@ -134,6 +349,7 @@
                       <input type="checkbox" id="software_list-8" name="software_list-8" class="form-control-custom">
                       <label for="software_list-8"> PHP <br /> </label>
                     </li>
+                  -->
                   </ul>
                 </div>
               </div>
@@ -148,7 +364,7 @@
 
                   <ul class="check-lists list-unstyled3">
                     <li class="d-flex align-items-center">
-                      <input type="checkbox" id="aerospacial_list-1" name="aerospacial_list-1" class="form-control-custom">
+                      <input type="checkbox" id="aerospacial_list-1" name="Filtro" value="aerospacial_aeromodelismo" class="form-control-custom">
                       <label for="aerospacial_list-1"> Aeromodelismo <br /> </label>
                     </li>
 
@@ -166,7 +382,7 @@
 
                   <ul class="check-lists list-unstyled4">
                     <li class="d-flex align-items-center">
-                      <input type="checkbox" id="energia_list-1" name="energia_list-1" class="form-control-custom">
+                      <input type="checkbox" id="energia_list-1" name="Filtro" value="energia_fenomenos" class="form-control-custom">
                       <label for="energia_list-1"> Fenômemos de transporte <br /> </label>
                     </li>
 
@@ -181,13 +397,13 @@
 
                 <div class="card to-do5">
                   <div class="card-filtros5">
-
+                  <!--
                   <ul class="check-lists list-unstyled5">
                     <li class="d-flex align-items-center">
                       <input type="checkbox" id="automotiva_list-1" name="automotiva_list-1" class="form-control-custom">
                       <label for="automotiva_list-1"> Design automotivo <br /> </label>
                     </li>
-
+                  -->
                   </ul>
                 </div>
               </div>
@@ -195,11 +411,15 @@
             </li>
 
 
-          <button  type="submit" style="border: none;  color: color-yiq(#33b35a);background-color: #33b35a;border-color: #33b35a;padding: 5px 65px;text-align: center;text-decoration: none;display: inline-block;font-size:16px;"><a><i class="icon-interface-windows"></i>Atualizar</button></a>
+          <button  id="updateDataPoint" type="submit" style="border: none;  color: color-yiq(#33b35a);background-color: #33b35a;border-color: #33b35a;padding: 5px 65px;text-align: center;text-decoration: none;display: inline-block;font-size:16px;"><a><i class="icon-interface-windows"></i>Atualizar</button></a>
+          <button  id="addDataPoint" type="submit" style="border: none;  color: color-yiq(#33b35a);background-color: #33b35a;border-color: #33b35a;padding: 5px 65px;text-align: center;text-decoration: none;display: inline-block;font-size:16px;"><a><i class="icon-interface-windows"></i>Add Data</button></a>
+
+
+
 
 
               <!--  <button type="submit">Search</button> -->
-            
+
           </ul>
         </div>
         <div class="admin-menu">
@@ -364,7 +584,7 @@
       <!-- Header Section-->
       <section class="dashboard-header section-padding">
         <div class="container-fluid">
-          <div class="row d-flex align-items-md-stretch">
+           <div class="row d-flex align-items-md-stretch">
             <!-- To Do List-->
           <!--
             <div class="col-lg-3 col-md-6">
@@ -409,27 +629,35 @@
             </div>
           -->
             <!-- Pie Chart-->
-            <div class="col-lg-6 col-md-5">
+              <div class="col-lg-12 col-md-5">
               <div class="card project-progress">
                 <h2 class="display h4">Gráficos estatísticos</h2>
                 <p> Quantidade de alunos nesses 4 cursos</p>
-                <div class="pie-chart">
+                <!--
+                <div   class="pie-chart">
                   <canvas id="pieChart" width="300" height="300"> </canvas>
                 </div>
+              -->
+              <div  id="chartContainer" style="width:50%; height:400px"></div>
+
               </div>
-            </div>
+          <!--  </div> -->
             <!-- Line Chart -->
+            <!--
             <div class="col-lg-6 col-md-13 flex-lg-last flex-md-first align-self-baseline">
               <div class="card sales-report">
                 <h2 class="display h4"> <br \> </h2>
                 <p> Quantidade de alunos inscritos nos últimos meses <br /> <br /> <br /></p>
+
                 <div class="line-chart">
                   <canvas id="lineCahrt"></canvas>
                 </div>
+
               </div>
             </div>
           </div>
         </div>
+      -->
       </section>
       <!-- Statistics Section-->
 
@@ -676,11 +904,9 @@
       </footer>
     </div>
     <!-- JavaScript files-->
-<<<<<<< HEAD
+
     {% block javascripts %}
 
-=======
->>>>>>> 5dd6273455eb0061111f37a77a9330c35f4602d5
     <script src="/static/vendor/jquery/jquery.min.js"></script>
     <script src="/static/vendor/popper.js/umd/popper.min.js"> </script>
     <script src="/static/vendor/bootstrap/js/bootstrap.min.js"></script>
@@ -692,9 +918,8 @@
     <script src="/static/js/charts-home.js"></script>
     <!-- Main File-->
     <script src="/static/js/front.js"></script>
-<<<<<<< HEAD
+
     {% endblock javascripts %}
-=======
->>>>>>> 5dd6273455eb0061111f37a77a9330c35f4602d5
+
   </body>
 </html>

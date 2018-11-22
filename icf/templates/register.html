@@ -63,20 +63,12 @@
           	<div class="sidenav-header-inner text-center"><img height="115" width="115" src="/static/img/logo.png" alt="person" class="img-fluid rounded-circle">
           </div>
             <div class="logo text-uppercase"><span>ICF</span><strong class="text-primary">Universidade de Brasília</strong></div>
-            {% if registered %}
-                   <h1>Thank you for registering!</h1>
-                 {% else %}
-                   <h1>Register Here</h1>
-                   <h3>Just fill out the form.</h3>
+
+
 
            <form enctype="multipart/form-data" method="POST">
-                     {% csrf_token %}
-                     {{ user_form.as_p }}
-                     {{ profile_form.as_p }}
-                     <!--<input type="submit" name="" value="Register">
-                   </form>
 
-                 {% endif %} -->
+                  
 
             <!--<form class="text-left form-validate">-->
                <div class="form-group-material">
@@ -110,7 +102,7 @@
               <input type="submit" name="" value="Register">
             </form>
 
-          {% endif %}
+
             <small>Já possui conta? </small><a href="login.html" class="signup">Entre</a>
           </div>
           <div class="copyrights text-center">

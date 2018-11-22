@@ -27,7 +27,6 @@ from core.views import esqueceuSenha
 from core.views import update
 from core.views import special
 from core.views import user_logout
-
 from django.conf.urls import url
 from core.views import esqueceuSenha
 from core.views import alterarSenha
@@ -45,7 +44,7 @@ urlpatterns = [
     path("sucesso/", cadastroSucesso, name ="sucesso"),
     path("", homeProfessor, name ="homeProfessor"),
     path("login/", login, name ="login"),
-    #path("register/", registro, name = "registro"),
+    path("register/", registro, name = "registro"),
     path("tabelas/", tabelas, name = "tabelas"),
     path("esqueceuSenha/", esqueceuSenha, name = "esqueceuSenha"),
     path("update/", update, name = "update"),

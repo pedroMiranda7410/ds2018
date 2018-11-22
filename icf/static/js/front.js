@@ -3,7 +3,30 @@ $(document).ready(function () {
     // ------------------------------------------------------- //
     // Custom Scrollbar
     // ------------------------------------------------------ //
+    function soma(){
 
+      var pacote = document.getElementsByName('Pacote');
+        for (var i = 0; i < pacote.length; i++){
+            if ( pacote[i].checked ) {
+                if(pacote[i].value == "software_python"){
+                    var Pacote_i = "Selecionou python";
+                    alert(Pacote_i);
+                }else if (pacote[i].value == "software_java") {
+                    var Pacote_ii = "Selecionou Java";
+                    alert(Pacote_ii);
+                }else if (pacote[i].value == "aerospacial_aeromodelismo") {
+                    var Pacote_iii = "Selecionou aeromodelismo";
+                    alert(Pacote_iii);
+                }else if (pacote[i].value == "energia_fenomenos") {
+                    var Pacote_iii = "Selecionou Fenômenos de Transporte";
+                    alert(Pacote_iii);
+                }
+            }
+        }
+
+    }
+
+    
     if ($(window).outerWidth() > 992) {
         $("nav.side-navbar").mCustomScrollbar({
             scrollInertia: 200
@@ -31,7 +54,7 @@ $(document).ready(function () {
 
     // ------------------------------------------------------- //
     // Tooltips init
-    // ------------------------------------------------------ //    
+    // ------------------------------------------------------ //
 
     $('[data-toggle="tooltip"]').tooltip()
 
@@ -39,7 +62,7 @@ $(document).ready(function () {
     // Universal Form Validation
     // ------------------------------------------------------ //
 
-    $('.form-validate').each(function() {  
+    $('.form-validate').each(function() {
         $(this).validate({
             errorElement: "div",
             errorClass: 'is-invalid',
@@ -51,7 +74,7 @@ $(document).ready(function () {
                 //console.log(element);
                 if (element.prop("type") === "checkbox") {
                     error.insertAfter(element.siblings("label"));
-                } 
+                }
                 else {
                     error.insertAfter(element);
                 }

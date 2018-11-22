@@ -1,6 +1,7 @@
 /*global $, document, Chart, LINECHART, data, options, window*/
 $(document).ready(function () {
 
+
     'use strict';
 
     // Main Template Color
@@ -75,6 +76,7 @@ $(document).ready(function () {
     // ------------------------------------------------------- //
     // Pie Chart
     // ------------------------------------------------------ //
+    //var python = 55;
     var PIECHART = $('#pieChart');
     var myPieChart = new Chart(PIECHART, {
         type: 'doughnut',
@@ -87,7 +89,7 @@ $(document).ready(function () {
             ],
             datasets: [
                 {
-                    data: [300, 50, 100,75],
+                    data: [55, 50, 100,75],
                     borderWidth: [1, 1, 1, 1],
                     backgroundColor: [
                         brandPrimary,
@@ -103,4 +105,29 @@ $(document).ready(function () {
         }
     });
 
+    function updateConfigByMutating(chart) {
+      chart.options.title.text = 'new title';
+      chart.update();
+  }
+
+  function updateConfigAsNewObject(chart) {
+      chart.options = {
+          responsive: true,
+          title:{
+              display:true,
+              text: 'Chart.js'
+          },
+          scales: {
+              xAxes: [{
+                  display: true
+              }],
+              yAxes: [{
+                  display: true
+              }]
+          }
+      }
+      chart.update();
+  }
+
+});
 });

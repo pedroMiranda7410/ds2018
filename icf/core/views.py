@@ -7,6 +7,11 @@ from django.http import HttpResponseRedirect, HttpResponse
 from django.urls import reverse
 from django.contrib.auth.decorators import login_required
 # Create your views here.
+from django.shortcuts import render_to_response
+import random
+import datetime
+import time
+
 
 def search(request):
     user_list = User.objects.all()
@@ -101,7 +106,7 @@ def user_login(request):
         else:
             print("Someone tried to login and failed.")
             print("They used username: {} and password: {}".format(username,password))
-            return HttpResponse("Invalid login details given")
+            return render(request, 'login.html')
 
     else:
         return render(request, 'login.html', {})
