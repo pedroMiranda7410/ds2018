@@ -50,7 +50,10 @@ window.onload = function () {
 		{
 			type: "pie",
 			dataPoints: [
-				{ y: 0 }
+        { y:0,label: ""},
+        { y:0,label: ""},
+        { y:0,label: ""},
+        { y:0,label: ""}
 			]
 		}
 		]
@@ -70,68 +73,62 @@ window.onload = function () {
     } */
 
     var pacote = document.getElementsByName('Filtro');
-    for (var i = 0; i < pacote.length; i++){
-        if ( pacote[i].checked ) {
-            if(pacote[i].value == "software_python"){
-                var Pacote_i = "Selecionou python";
-                alert(Pacote_i);
-            }else if (pacote[i].value == "software_java") {
-                var Pacote_ii = "Selecionou Java";
-                alert(Pacote_ii);
-            }else if (pacote[i].value == "aerospacial_aeromodelismo") {
-                var Pacote_iii = "Selecionou aeromodelismo";
-                alert(Pacote_iii);
-            }else if (pacote[i].value == "energia_fenomenos") {
-                var Pacote_iii = "Selecionou Fenômenos de Transporte";
-                alert(Pacote_iii);
-            }
-        }
-    }
+
+
 	var length = chart.options.data[0].dataPoints.length;
+
   for (var i = 0; i < pacote.length; i++){
       if ( pacote[i].checked ) {
           if(pacote[i].value == "software_python"){
-            chart.options.title.text = "";
-          	chart.options.data[0].dataPoints.push({ y:8,label: "python"});
-          	chart.render();
+          	chart.options.data[0].dataPoints[0].y = 8;
+            chart.options.data[0].dataPoints[0].label = "python";
+
 
           }else if (pacote[i].value == "software_java") {
-            chart.options.title.text = "";
-          	chart.options.data[0].dataPoints.push({ y:3,label: "Java"});
-          	chart.render();
+          	chart.options.data[0].dataPoints[1].y = 3;
+            chart.options.data[0].dataPoints[1].label = "Java";
+
           }else if (pacote[i].value == "aerospacial_aeromodelismo") {
-            chart.options.title.text = "";
-          	chart.options.data[0].dataPoints.push({ y:2,label: "aeromodelismo"});
-          	chart.render();
+
+          	chart.options.data[0].dataPoints[2].y = 2;
+            chart.options.data[0].dataPoints[2].label = "Aeromodelismo";
+
           }else if (pacote[i].value == "energia_fenomenos") {
-            chart.options.title.text = "";
-          	chart.options.data[0].dataPoints.push({ y:15,label: "Fenômenos de Transporte"});
-          	chart.render();
+
+          	chart.options.data[0].dataPoints[3].y = 15;
+            chart.options.data[0].dataPoints[3].label = "Fenômenos de Transporte";
+
           }
+
       }
-      else if (pacote[i].unchecked){
+      else if (!pacote[i].checked){
         if(pacote[i].value == "software_python"){
           chart.options.title.text = "";
-          chart.options.data[1] = { y:0};
-          chart.render();
+          chart.options.data[0].dataPoints[0].y = 0;
+          chart.options.data[0].dataPoints[0].label = "";
+
 
         }else if (pacote[i].value == "software_java") {
           chart.options.title.text = "";
-          chart.options.data[2].dataPoints.push({ y:0});
-          chart.render();
+          chart.options.data[0].dataPoints[1].y = 0;
+          chart.options.data[0].dataPoints[1].label = "";
+
         }else if (pacote[i].value == "aerospacial_aeromodelismo") {
           chart.options.title.text = "";
-          chart.options.data[3].dataPoints.push({ y:0});
-          chart.render();
+          chart.options.data[0].dataPoints[2].y = 0;
+          chart.options.data[0].dataPoints[2].label = "";
+
         }else if (pacote[i].value == "energia_fenomenos") {
           chart.options.title.text = "";
-          chart.options.data[4].dataPoints.push({ y:0});
-          chart.render();
+          chart.options.data[0].dataPoints[3].y = 0;
+          chart.options.data[0].dataPoints[3].label = "";
+
         }
 
 
       }
   }
+  chart.render();
 
 
 	});
@@ -411,9 +408,8 @@ window.onload = function () {
             </li>
 
 
-          <button  id="updateDataPoint" type="submit" style="border: none;  color: color-yiq(#33b35a);background-color: #33b35a;border-color: #33b35a;padding: 5px 65px;text-align: center;text-decoration: none;display: inline-block;font-size:16px;"><a><i class="icon-interface-windows"></i>Atualizar</button></a>
-          <button  id="addDataPoint" type="submit" style="border: none;  color: color-yiq(#33b35a);background-color: #33b35a;border-color: #33b35a;padding: 5px 65px;text-align: center;text-decoration: none;display: inline-block;font-size:16px;"><a><i class="icon-interface-windows"></i>Add Data</button></a>
 
+        <button  id="addDataPoint" type="submit" style="border: none;  color: color-yiq(#33b35a);background-color: #33b35a;border-color: #33b35a;padding: 5px 65px;text-align: center;text-decoration: none;display: inline-block;font-size:16px;"><a><i class="icon-interface-windows"></i>Atualizar</button></a> 
 
 
 
@@ -507,24 +503,9 @@ window.onload = function () {
               <div class="wrapper count-title d-flex">
                 <div class="icon"><i class="icon-user"></i></div>
                 <div class="name"><strong class="text-uppercase">Alunos Cadastrados</strong><span>Últimos 7 dias</span>
-                  <div class="count-number">32</div>
+                  <div class="count-number">28</div>
                 </div>
-                <tbody>
-     {% for user in filter.qs %}
 
-           {% for group in user.groups.all %}
-             {{ group }}
-           {% empty %}
-             <em class="text-muted">No group</em>
-           {% endfor %}
-         </td>
-       </tr>
-     {% empty %}
-       <tr>
-         <td colspan="5">No data</td>
-       </tr>
-     {% endfor %}
-   </tbody>
               </div>
             </div>
 
