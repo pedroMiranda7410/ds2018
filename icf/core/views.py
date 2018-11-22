@@ -8,6 +8,7 @@ from django.urls import reverse
 from django.contrib.auth.decorators import login_required
 # Create your views here.
 from django.shortcuts import render_to_response
+from django.views.decorators.http import require_POST
 import random
 import datetime
 import time
