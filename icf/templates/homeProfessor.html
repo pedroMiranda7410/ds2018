@@ -80,26 +80,25 @@ window.onload = function () {
   for (var i = 0; i < pacote.length; i++){
       if ( pacote[i].checked ) {
           if(pacote[i].value == "software_python"){
-            chart.options.data[0].dataPoints[0].y = 8;
+            chart.options.data[0].dataPoints[0].y = {{numero_python}};
             chart.options.data[0].dataPoints[0].label = "Python";
 
 
           }else if (pacote[i].value == "software_java") {
-            chart.options.data[0].dataPoints[1].y = 3;
+            chart.options.data[0].dataPoints[1].y = {{numero_java}};
             chart.options.data[0].dataPoints[1].label = "Java";
 
           }else if (pacote[i].value == "aerospacial_aeromodelismo") {
 
-            chart.options.data[0].dataPoints[2].y = 2;
+            chart.options.data[0].dataPoints[2].y = {{numero_aero}};
             chart.options.data[0].dataPoints[2].label = "Aeromodelismo";
 
           }else if (pacote[i].value == "energia_fenomenos") {
 
-            chart.options.data[0].dataPoints[3].y = 15;
+            chart.options.data[0].dataPoints[3].y = {{numero_fenomenos}};
             chart.options.data[0].dataPoints[3].label = "Fenômenos de Transporte";
 
           }
-
       }
       else if (!pacote[i].checked){
         if(pacote[i].value == "software_python"){
@@ -375,8 +374,8 @@ window.onload = function () {
             <div class="col-xl-2 col-md-4 col-6">
               <div class="wrapper count-title d-flex">
                 <div class="icon"><i class="icon-user"></i></div>
-                <div class="name"><strong class="text-uppercase">Alunos Cadastrados</strong><span>Últimos 7 dias</span>
-                  <div class="count-number">28</div>
+                <div class="name"><strong class="text-uppercase">Alunos Cadastrados</strong><span></span>
+                  <div class="count-number">{{numero_pessoas}}</div>
                 </div>
               </div>
             </div>
@@ -390,7 +389,7 @@ window.onload = function () {
           <!-- Pie Chart-->
             <div class="esq">
               <h2 class="display h4">Gráficos estatísticos</h2>
-                <p> Quantidade de alunos nesses 3 cursos</p>
+                <p> </p>
                 <!--
                 <div   class="pie-chart">
                   <canvas id="pieChart" width="300" height="300"> </canvas>
