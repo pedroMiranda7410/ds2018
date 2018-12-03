@@ -14,30 +14,108 @@ import datetime
 import time
 from core.models import Usuario
 
+### Java values ###
 def num_java():
 
     c = len(Usuario.objects.filter(conhecimento_java=True))
-    return c
-c = num_java()    
+    lista = []
+    lista = Usuario.objects.filter(conhecimento_java=True)
 
+    return c
+c = num_java()
+
+def nomes_java():
+    lista_objts = []
+    lista_objts = Usuario.objects.filter(conhecimento_java=True)
+    lista_nomes = []
+    i = 0
+    j = 0
+    for i in lista_objts:
+        lista_nomes.append(lista_objts[j].nome)
+        j = j + 1
+        #print(lista_nomes)
+        #print(Usuario.objects.all().values('nome'))
+    return lista_nomes
+
+nomes_j = nomes_java()
+
+def nomes_teste():
+    lista_objts = []
+    lista_objts = Usuario.objects.filter(conhecimento_java=True)
+   
+        #print(lista_nomes)
+        #print(Usuario.objects.all().values('nome'))
+    return lista_objts[0].nome
+
+nomes_teste = nomes_teste()
+
+###  python values ###
 def num_python():
     d = len(Usuario.objects.filter(conhecimento_python=True))
     return d
 
 d = num_python()
 
+def nomes_python():
+    lista_objts = []
+    lista_objts = Usuario.objects.filter(conhecimento_python=True)
+    lista_nomes = []
+    i = 0
+    j = 0
+    for i in lista_objts:
+        lista_nomes.append(lista_objts[j].nome)
+        j = j + 1
+        #print(lista_nomes)
+        #print(Usuario.objects.all().values('nome'))
+    return lista_nomes
+
+nomes_p = nomes_python();
+
+### aero values ###
 def num_aero():
     e = len(Usuario.objects.filter(conhecimento_aeromodelismo=True))
     return e
     
 e = num_aero()
 
+def nomes_aero():
+    lista_objts = []
+    lista_objts = Usuario.objects.filter(conhecimento_aeromodelismo=True)
+    lista_nomes = []
+    i = 0
+    j = 0
+    for i in lista_objts:
+        lista_nomes.append(lista_objts[j].nome)
+        j = j + 1
+        #print(lista_nomes)
+        #print(Usuario.objects.all().values('nome'))
+    return lista_nomes
+
+nomes_a = nomes_aero();
+
+### fenomenos values ###
 def num_fenomenos():
     f = len(Usuario.objects.filter(conhecimento_fenomenos=True))
     return f
 
 f = num_fenomenos()
 
+def nomes_fenomenos():
+    lista_objts = []
+    lista_objts = Usuario.objects.filter(conhecimento_fenomenos=True)
+    lista_nomes = []
+    i = 0
+    j = 0
+    for i in lista_objts:
+        lista_nomes.append(lista_objts[j].nome)
+        j = j + 1
+        #print(lista_nomes)
+        #print(Usuario.objects.all().values('nome'))
+    return lista_nomes
+
+nomes_f = nomes_fenomenos();
+
+### num pessoas ###
 def num_pessoas():
     usuarios = Usuario.objects.all().values('id')
     g = 0
@@ -54,10 +132,10 @@ def search(request):
     return render(request, 'search/index.html', {'filter': user_filter})
 
 def home(request):
-    return render(request,'index.html')
+    return render(request,'index.html',{'teste': nomes_teste,'numero_java': c,'nomes_java': nomes_j, 'numero_python':d,'nomes_python': nomes_p, 'numero_aero':e,'nomes_aero':nomes_a , 'numero_fenomenos':f,'nomes_fenomenos':nomes_f, 'numero_pessoas':g})
 
 def homeProfessor(request):
-    return render(request,'homeProfessor.html',{'numero_java': c, 'numero_python':d, 'numero_aero':e , 'numero_fenomenos':f, 'numero_pessoas':g})
+    return render(request,'homeProfessor.html',{'numero_java': c,'nomes_java': nomes_j, 'numero_python':d,'nomes_python': nomes_p, 'numero_aero':e,'nomes_aero':nomes_a , 'numero_fenomenos':f,'nomes_fenomenos':nomes_f, 'numero_pessoas':g})
 
 def charts(request):
     return render(request,'charts.html')

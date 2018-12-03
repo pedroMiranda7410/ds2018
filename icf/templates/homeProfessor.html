@@ -80,12 +80,12 @@ window.onload = function () {
   for (var i = 0; i < pacote.length; i++){
       if ( pacote[i].checked ) {
           if(pacote[i].value == "software_python"){
-            chart.options.data[0].dataPoints[0].y = {{numero_python}};
+            chart.options.data[0].dataPoints[0].y = {{numero_java}};
             chart.options.data[0].dataPoints[0].label = "Python";
 
 
           }else if (pacote[i].value == "software_java") {
-            chart.options.data[0].dataPoints[1].y = {{numero_java}};
+            chart.options.data[0].dataPoints[1].y = {{numero_python}};
             chart.options.data[0].dataPoints[1].label = "Java";
 
           }else if (pacote[i].value == "aerospacial_aeromodelismo") {
@@ -342,7 +342,7 @@ window.onload = function () {
               </ul>
             </li>
 
-        <button  id="addDataPoint" type="submit" style="border: none;  color: color-yiq(#33b35a);background-color: #33b35a;border-color: #33b35a;padding: 5px 65px;text-align: center;text-decoration: none;display: inline-block;font-size:16px;"><a><i class="icon-interface-windows"></i>Atualizar</button></a>
+        <button  id="addDataPoint" type="submit" style="border: none;  color: color-yiq(#33b35a);background-color: #33b35a;border-color: #33b35a;padding: 5px 65px;text-align: center;text-decoration: none;display: inline-block;font-size:16px;"><a><i class="icon-interface-windows"></i>Atualizar</button></a> 
 
           </ul>
         </div>
@@ -409,32 +409,18 @@ window.onload = function () {
                   <div class="feed-box">
                     <ul class="feed-elements list-unstyled">
                       <!-- List-->
+                      {%for elem in nomes_java %}
                       <li class="clearfix">
                         <div class="feed d-flex justify-content-between">
                           <div class="feed-body d-flex justify-content-between"><a href="#" class="feed-profile"></a>
-                            <div class="content"><strong> Matheus Miguel</strong><small>qwerty@qwerty.com </small>
+                            <div class="content"><strong>  {{elem}} </strong><small>{{elem}}@email.com </small>
                             </div>
                           </div>
                         </div>
                       </li>
-                      <!-- List-->
-                      <li class="clearfix">
-                        <div class="feed d-flex justify-content-between">
-                          <div class="feed-body d-flex justify-content-between"><a href="#" class="feed-profile"></a>
-                            <div class="content"><strong>Ana Júlia</strong><small>asdfg@asdfg.com</small>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <!-- List-->
-                      <li class="clearfix">
-                        <div class="feed d-flex justify-content-between">
-                          <div class="feed-body d-flex justify-content-between"><a href="#" class="feed-profile"></a>
-                            <div class="content"><strong>Ronaldinho Gaúcho</strong><small>bruxo@bruxo.com</small>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
+
+                      {%endfor%}
+                     
                     </ul>
                   </div>
                 </div>
