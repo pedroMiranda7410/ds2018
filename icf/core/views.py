@@ -15,45 +15,25 @@ import time
 from core.models import Usuario
 
 def num_java():
-    usuarios = Usuario.objects.all().values('conhecimento_java')
-    c =0
-    i=0
-    for i in usuarios:
-        if  True:
-            c = c + 1
-    return c  
 
+    c = len(Usuario.objects.filter(conhecimento_java=True))
+    return c
 c = num_java()    
 
 def num_python():
-    usuarios = Usuario.objects.all().values('conhecimento_python')
-    d = 0
-    i=0
-    for i in usuarios:
-        if True:
-            d = d + 1
+    d = len(Usuario.objects.filter(conhecimento_python=True))
     return d
 
 d = num_python()
 
 def num_aero():
-    usuarios = Usuario.objects.all().values('conhecimento_aeromodelismo')
-    e = 0
-    i=0
-    for i in usuarios:
-        if True:
-            e = e + 1
+    e = len(Usuario.objects.filter(conhecimento_aeromodelismo=True))
     return e
     
 e = num_aero()
 
 def num_fenomenos():
-    usuarios = Usuario.objects.all().values('conhecimento_fenomenos')
-    f = 0
-    i=0
-    for i in usuarios:
-        if True:
-            f = f + 1
+    f = len(Usuario.objects.filter(conhecimento_fenomenos=True))
     return f
 
 f = num_fenomenos()

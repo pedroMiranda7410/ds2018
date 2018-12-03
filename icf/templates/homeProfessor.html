@@ -80,12 +80,12 @@ window.onload = function () {
   for (var i = 0; i < pacote.length; i++){
       if ( pacote[i].checked ) {
           if(pacote[i].value == "software_python"){
-            chart.options.data[0].dataPoints[0].y = {{numero_python}};
+            chart.options.data[0].dataPoints[0].y = {{numero_java}};
             chart.options.data[0].dataPoints[0].label = "Python";
 
 
           }else if (pacote[i].value == "software_java") {
-            chart.options.data[0].dataPoints[1].y = {{numero_java}};
+            chart.options.data[0].dataPoints[1].y = {{numero_python}};
             chart.options.data[0].dataPoints[1].label = "Java";
 
           }else if (pacote[i].value == "aerospacial_aeromodelismo") {
@@ -99,6 +99,7 @@ window.onload = function () {
             chart.options.data[0].dataPoints[3].label = "Fenômenos de Transporte";
 
           }
+
       }
       else if (!pacote[i].checked){
         if(pacote[i].value == "software_python"){
@@ -389,7 +390,7 @@ window.onload = function () {
           <!-- Pie Chart-->
             <div class="esq">
               <h2 class="display h4">Gráficos estatísticos</h2>
-                <p> </p>
+                <p> Quantidade de alunos nesses 3 cursos</p>
                 <!--
                 <div   class="pie-chart">
                   <canvas id="pieChart" width="300" height="300"> </canvas>
