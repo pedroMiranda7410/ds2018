@@ -80,22 +80,22 @@ window.onload = function () {
   for (var i = 0; i < pacote.length; i++){
       if ( pacote[i].checked ) {
           if(pacote[i].value == "software_python"){
-          	chart.options.data[0].dataPoints[0].y = 8;
+          	chart.options.data[0].dataPoints[0].y = {{numero_python}};
             chart.options.data[0].dataPoints[0].label = "Python";
 
 
           }else if (pacote[i].value == "software_java") {
-          	chart.options.data[0].dataPoints[1].y = 4;
+          	chart.options.data[0].dataPoints[1].y = {{numero_java}};
             chart.options.data[0].dataPoints[1].label = "Java";
 
           }else if (pacote[i].value == "aerospacial_aeromodelismo") {
 
-          	chart.options.data[0].dataPoints[2].y = 2;
+          	chart.options.data[0].dataPoints[2].y = {{numero_aero}};
             chart.options.data[0].dataPoints[2].label = "Aeromodelismo";
 
           }else if (pacote[i].value == "energia_fenomenos") {
 
-          	chart.options.data[0].dataPoints[3].y = 15;
+          	chart.options.data[0].dataPoints[3].y = {{numero_fenomenos}};
             chart.options.data[0].dataPoints[3].label = "Fenômenos de Transporte";
 
           }
@@ -251,7 +251,7 @@ window.onload = function () {
         <!-- Sidebar Header    -->
         <div class="sidenav-header d-flex align-items-center justify-content-center">
           <!-- User Info-->
-          <div class="sidenav-header-inner text-center"><img src="/static/img/teste_telegram.jpg" alt="person" class="img-fluid rounded-circle">
+          <div class="sidenav-header-inner text-center"><img src="/static/img/foto_perfil.jpg" alt="person" class="img-fluid rounded-circle">
             <h2 class="h5">Pedro Henrique Queiroz</h2><span>Programador</span>
           </div>
           <!-- Small Brand information, appears on minimized sidebar-->
@@ -341,7 +341,7 @@ window.onload = function () {
               </ul>
             </li>
 
-        <button  id="addDataPoint" type="submit" style="border: none;  color: color-yiq(#33b35a);background-color: #33b35a;border-color: #33b35a;padding: 5px 65px;text-align: center;text-decoration: none;display: inline-block;font-size:16px;"><a><i class="icon-interface-windows"></i>Atualizar</button></a> 
+        <button  id="addDataPoint" type="submit" style="border: none;  color: color-yiq(#33b35a);background-color: #33b35a;border-color: #33b35a;padding: 5px 65px;text-align: center;text-decoration: none;display: inline-block;font-size:16px;"><a><i class="icon-interface-windows"></i>Atualizar</button></a>
 
           </ul>
         </div>

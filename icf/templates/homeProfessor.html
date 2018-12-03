@@ -80,12 +80,12 @@ window.onload = function () {
   for (var i = 0; i < pacote.length; i++){
       if ( pacote[i].checked ) {
           if(pacote[i].value == "software_python"){
-            chart.options.data[0].dataPoints[0].y = {{numero_java}};
+            chart.options.data[0].dataPoints[0].y = {{numero_python}};
             chart.options.data[0].dataPoints[0].label = "Python";
 
 
           }else if (pacote[i].value == "software_java") {
-            chart.options.data[0].dataPoints[1].y = {{numero_python}};
+            chart.options.data[0].dataPoints[1].y = {{numero_java}};
             chart.options.data[0].dataPoints[1].label = "Java";
 
           }else if (pacote[i].value == "aerospacial_aeromodelismo") {
@@ -342,7 +342,7 @@ window.onload = function () {
               </ul>
             </li>
 
-        <button  id="addDataPoint" type="submit" style="border: none;  color: color-yiq(#33b35a);background-color: #33b35a;border-color: #33b35a;padding: 5px 65px;text-align: center;text-decoration: none;display: inline-block;font-size:16px;"><a><i class="icon-interface-windows"></i>Atualizar</button></a> 
+        <button  id="addDataPoint" type="submit" style="border: none;  color: color-yiq(#33b35a);background-color: #33b35a;border-color: #33b35a;padding: 5px 65px;text-align: center;text-decoration: none;display: inline-block;font-size:16px;"><a><i class="icon-interface-windows"></i>Atualizar</button></a>
 
           </ul>
         </div>
